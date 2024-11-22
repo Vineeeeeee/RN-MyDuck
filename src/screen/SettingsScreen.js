@@ -24,21 +24,21 @@ const SettingsScreen = ({navigation, setIsLoggedIn}) => {
   const [user, setUser] = useState();
   const [AccID, setAccID] = useState();
   const [categoryTotals, setCategoryTotals] = useState([]);
-  const [userLoading, setUserLoading] = useState(true); // Add loading state for user
+  const [userLoading, setUserLoading] = useState(true); 
 
   const [modalVisible, setModalVisible] = useState(false);
   const [newUsername, setNewUsername] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const [deleteModalVisible, setDeleteModalVisible] = useState(false); // For confirmation modal
-  const [categoryToDelete, setCategoryToDelete] = useState(null); // Stores the selected category for deletion
+  const [deleteModalVisible, setDeleteModalVisible] = useState(false);
+  const [categoryToDelete, setCategoryToDelete] = useState(null); 
   
   const { currency, exchangeRate, updateCurrency } = useCurrency();
 
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-  const [isUSD, setIsUSD] = useState(currency === "USD"); // Initial state based on current currency
+  const [isUSD, setIsUSD] = useState(currency === "USD");
 
 
   const getUserData = useCallback(async () => {
@@ -60,12 +60,10 @@ const SettingsScreen = ({navigation, setIsLoggedIn}) => {
   }, []);
 
   useEffect(() => {
-
-
-    const initializeUserData = async () => {
-      await getUserData(); // Chỉ gọi khi màn hình được khởi tạo
+    const load = async () => {
+      await getUserData(); 
     };
-    initializeUserData();
+    load();
   }, []); // Chỉ chạy một lần khi component mount
   
   useEffect(() => {
