@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "MyDuck",
+    "slug": "dbtest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/myduck.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/myduck.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.itmevinee.dbtest"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bb13882d-8700-4c28-a125-28373cdb79a9"
+      }
+    }
+  }
+}
